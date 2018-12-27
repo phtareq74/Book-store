@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    /*    background-color: lavender;*/
+
+    background-image: url(storeBackground.jpg);
+    height:100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #b34918;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 60px;
+    /*
+    background-image: url(storeBackground.jpg);
+    background-repeat: no-repeat;
+*/
+}
+
+
+.header {
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 80%;
+    height: 70px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.searchbook {
+    display: flex;
+    align-self: center;
+    margin-right: 10px;
+
+}
+
+#search-input {
+    border-radius: 10px;
+}
+
+.imagecontainer {
+    height: 75px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+
+
+.image {
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+}
+
+/*
+.detailimage {
+    width: 200px;
+    height: 250px;
+}
+*/
+
+.info {
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn {
+    width: 50%;
+    align-self: center;
+    background-color: cadetblue;
+    color: white;
+}
+
+
+.item p {
+    width: 100%;
+    padding: 10px;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 300px;
+    height: 325px;
+}
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: ;
+
+}
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+    background-color: yellow;
+    padding: 5px;
+}
+
+#bookContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
